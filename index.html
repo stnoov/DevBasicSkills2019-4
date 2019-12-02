@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <title>Math Project</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-item"><a href="#">Number system conversion</a></div>
+        <div class="header-item"><a href="#">Number system outputs</a></div>
+        <div class="header-item"><a href="#">Combinatorics</a></div>
+        <div class="header-item"><a href="#">Truth tables</a></div>
+        <div class="header-item"><a href="#">Random values</a></div>
+    </div>
+    <p><strong>This website is designed to help people with such thigs as: converting numbers (ex. Binary, Octal, Hex), 
+        Generating truth tables, solve combinatorics issues and generate random values.</strong> </p>
+    <div class="container">
+        <table class="center">
+            <tr>
+                <td colspan="2"><h2>Number system conversion</h2></td>
+            </tr>
+            <tr>
+                <td style="width: 200px">FROM
+                        <select class="form-item">
+                                <option value="Decimal">Decimal</option>
+                                <option value="Binary">Binary</option>
+                                <option value="Octal">Octal</option>
+                                <option value="Hex">Hex</option>
+                        </select>
+                </td>
+                <td style="width: 200px;">TO
+                        <select class="form-item">
+                                <option value="Decimal">Decimal</option>
+                                <option value="Binary">Binary</option>
+                                <option value="Octal">Octal</option>
+                                <option value="Hex">Hex</option>
+                        </select>
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    Enter your number here: 
+                </td>
+                <td>
+                        <input type="number" class="form-item" id="numberFromUser">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <button type="reset" >RESET</button>
+                </td>
+                <td>
+                <button type="submit" >SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td>
+                    The number is: 
+                </td>
+                <td>
+                        <input class="form-item" type="number">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <div class="outputs">
+        <h2>Number system outputs</h2>
+        <p>This section prints the table showing decimals 0-50 in BIN, OCT and HEX systems</p>
+        <p><button>PRINT THE TABLE</button></p>
+    </div>
+
+</div>
+</body>
+</html>
