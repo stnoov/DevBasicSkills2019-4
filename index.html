@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="mathProject.js"></script>
     <title>Math Project</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="header-item"><a href="#">Truth tables</a></div>
         <div class="header-item"><a href="#">Random values</a></div>
     </div>
-    <p><strong>This website is designed to help people with such thigs as: converting numbers (ex. Binary, Octal, Hex), 
+    <p><strong> — This website is designed to help people with such thigs as: converting numbers (ex. Binary, Octal, Hex), 
         Generating truth tables, solve combinatorics issues and generate random values.</strong> </p>
     <div class="container">
         <table class="center">
@@ -24,17 +25,17 @@
                 <td colspan="2"><h2>Number system conversion</h2></td>
             </tr>
             <tr>
-                <td style="width: 200px">FROM
-                        <select class="form-item">
-                                <option value="Decimal">Decimal</option>
+                <td>FROM
+                        <select class="form-item" id="systemFrom">
+                                <option value="Decimal" selected="selected">Decimal</option>
                                 <option value="Binary">Binary</option>
                                 <option value="Octal">Octal</option>
                                 <option value="Hex">Hex</option>
-                        </select>
+                        </select>                       
                 </td>
-                <td style="width: 200px;">TO
-                        <select class="form-item">
-                                <option value="Decimal">Decimal</option>
+                <td>TO
+                        <select class="form-item" id="systemTo">
+                                <option value="Decimal" selected="selected">Decimal</option>
                                 <option value="Binary">Binary</option>
                                 <option value="Octal">Octal</option>
                                 <option value="Hex">Hex</option>
@@ -46,22 +47,22 @@
                     Enter your number here: 
                 </td>
                 <td>
-                        <input type="number" class="form-item" id="numberFromUser">
+                        <input class="form-item" id="numberFromUser">
                 </td>
             </tr>
             <tr>
                 <td> 
-                    <button type="reset" >RESET</button>
+                    <button onclick="resetConversion()" >RESET</button>
                 </td>
                 <td>
-                <button type="submit" >SUBMIT</button></td>
+                <button onclick="conversion()" >SUBMIT</button></td>
             </tr>
             <tr>
                 <td>
-                    The number is: 
+                    The   result   is: 
                 </td>
                 <td>
-                        <input class="form-item" type="number">
+                        <p id="conversionResult">0</p>
                 </td>
             </tr>
         </table>

@@ -1,12 +1,36 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat';font-size: 16px;
+    font-family: 'Montserrat';
+    font-size: 16px;
 }
-
 h2 {
     font-size: 40px;
 }
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+p {
+
+    margin-left: 10px;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+ }
 
 .header {
     height: 90px;
@@ -16,17 +40,11 @@ h2 {
     justify-content: flex-end;
     margin-bottom: 30px;
 }
-
 .header-item {
     margin-top: 70px;
     font-size: 18px;
     margin-left: 50px;
     margin-right: 5px;
-}
-
-.header-item a {
-    color: #FFFFFF;
-    text-decoration: none;
 }
 .container {
     background-color: #333333;
@@ -35,18 +53,14 @@ h2 {
     text-align: center;
     padding-bottom: 30px;
 }
-
 table {
     width: 550px;
     border-radius: 8px;
 }
-
 .center {
     margin-left:auto; 
     margin-right:auto;
   }
-
-
 .container table td{
     padding: 10px;
 }
@@ -71,17 +85,4 @@ table {
 
  .outputs h2 {
      padding-top: 150px
- }
-
- button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
  }
