@@ -62,7 +62,7 @@
                     The   result   is: 
                 </td>
                 <td>
-                        <p id="conversionResult">0</p>
+                        <p id="conversionResult"></p>
                 </td>
             </tr>
         </table>
@@ -71,9 +71,76 @@
         <div class="outputs">
         <h2>Number system outputs</h2>
         <p>This section prints the table showing decimals 0-50 in BIN, OCT and HEX systems</p>
-        <p><button>PRINT THE TABLE</button></p>
+        <p><a href="numberOutputs.html"><button>PRINT THE TABLE</button></a></p>
+        
+        </table>
     </div>
+</div>
+<div class="container">
+    <table class="center">
+        <tr>
+            <td colspan="2"><h2>Combinatorics</h2></td>
+        </tr>
+        <tr>
+            <td>Choose what to calculate:</td>
+                <td>
+                    <input type="radio" name="combinatorics" onclick="chosenMethodCombinations()" id="Combinations">Combinations
+                    <input type="radio" name="combinatorics" onclick="WithSampling() , chosenMethodPermutations()"  id="Permutations">Permutations
+                    <div id="withSampling"><span id="WithSamplingText"></span></div>                     
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p >The <span id="chosenMethod"> </span> is calculated by the following formula <br> <strong><span id="chosenMethodFormula"></strong></span></p>
+            </td>
+        </tr>
+        <tr>  
+            <td >
+                Enter "P" value here: 
+            </td>
+            <td>
+                    <input class="form-item" id="numberFromUserP">
+            </td>
+        </tr>
+        <tr>
+            <td >
+                Enter "R" value here: 
+                </td>
+                <td>
+                        <input class="form-item" id="numberFromUserR">
+                </td>
+        </tr>
+        <tr>
+            <td> 
+                <button onclick="resetConversion()" >RESET</button>
+            </td>
+            <td>
+            <button onclick="Combinatorics()" >SUBMIT</button></td>
+        </tr>
+        <tr>
+            <td>
+                The   result   is: 
+            </td>
+            <td>
+                    <p id="combinatoricsResult">0</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="container">
+        <table class="center">
+                <tr>
+                    <td colspan="2"><h2>Truth tables</h2></td>
+                </tr>
+        </table>
+</div>
 
+<div class="container">
+        <table class="center">
+                <tr>
+                    <td colspan="2"><h2>Random values</h2></td>
+                </tr>
+        </table>
 </div>
 </body>
 </html>

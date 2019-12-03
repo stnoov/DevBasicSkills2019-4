@@ -81,5 +81,69 @@ function resetConversion() {
     var numberFromUser = document.getElementById("numberFromUser")
     numberFromUser.value = numberFromUser.defaultValue;
     var resultField = document.getElementById("conversionResult");
-    resultField = 0;
 }
+
+function WithSampling() {
+    var divElement = document.getElementById('withSampling');
+    var x = document.createElement("INPUT");
+    var checkbox = document.createElement('input'); 
+    checkbox.type = "checkbox"; 
+    checkbox.name = "name"; 
+    checkbox.value = "value"; 
+    checkbox.id = "samplingCheckbox"; 
+    var label = document.getElementById('WithSamplingText');
+    label.innerHTML = "With Sampling";
+    divElement.appendChild(checkbox); 
+    }
+
+function chosenMethodCombinations() {
+    if (document.contains(document.getElementById("samplingCheckbox"))) {
+        var label = document.getElementById('WithSamplingText');
+        label.innerHTML = "";
+        document.getElementById('samplingCheckbox').remove();
+} 
+    var chosenValue = document.getElementById('chosenMethod');
+    var chosenFormula = document.getElementById('chosenMethodFormula')
+    chosenValue.innerHTML = "combinations";
+    chosenFormula.innerHTML = "P! / R! x (P-R)!"
+}
+
+function chosenMethodPermutations() {
+    var chosenValue = document.getElementById('chosenMethod');
+    var chosenFormula = document.getElementById('chosenMethodFormula')
+    chosenValue.innerHTML = "permutations";
+    chosenFormula.innerHTML = "!P / !(P - R) "
+}
+
+function fact(num) {
+    var rval = 1;
+    for (var i = 2; i <= num; i++)
+        rval = rval * i;
+    return rval;
+}
+
+function permutations(n, k) {
+    var p = fact(n);
+    var v = fact(n-k);
+    return p/v;
+}
+
+function combinations(n, k) 
+  {
+    var p = fact(n);
+    var v = fact(n-k);
+    return p/v/fact(k);
+  }
+
+function Combinatorics() {
+    
+    var valueP = document.getElementById('numberFromUserP').value;
+    var valueR = document.getElementById('numberFromUserR').value;
+    var combinatoricsResult = document.getElementById('combinatoricsResult');
+
+    if (document.getElementById('Combinations').checked) {
+        combinatoricsResult.innerHTML = combinations(valueP,valueR);
+      } else if (document.getElementById('Permutations').checked) {
+        combinatoricsResult.innerHTML = permutations(valueP,valueR);
+      }
+    }
