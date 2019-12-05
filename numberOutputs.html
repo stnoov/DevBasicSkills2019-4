@@ -12,16 +12,21 @@
 <body>
     <body>
         <div class="header">
-            <div class="header-item"><a href="#">Number system conversion</a></div>
-            <div class="header-item"><a href="#">Number system outputs</a></div>
-            <div class="header-item"><a href="#">Combinatorics</a></div>
-            <div class="header-item"><a href="#">Truth tables</a></div>
-            <div class="header-item"><a href="#">Random values</a></div>
+                <div class="header-item"><a href="index.html#conversionSection">Number system conversion</a></div>
+                <div class="header-item"><a href="index.html#NumberSystemOutputsSection">Number system outputs</a></div>
+                <div class="header-item"><a href="index.html#CombinatoricsSection">Combinatorics</a></div>
+                <div class="header-item"><a href="index.html#truthTablesSection">Truth tables</a></div>
+                <div class="header-item"><a href="index.html##randomValuesSection">Random values</a></div>
         </div>
-<div class="container">
-    <button onclick="tableCreate()">GENERATE TABLE</button>
-    <div id="outputTable"></div>
 
+        <div class="container">
+                <br>
+            <a href="index.html"><button style="margin-bottom: 20px;">Back to Home</button></a>
+            <button style="margin-bottom: 20px;"  id="checkButton" onclick="fillTable()">Hide</button>
+            <div id="conversionTable">
+               <script>createTable();</script>
+              </div>
+            </div>
 </div>
 </body>
 </html>

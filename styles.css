@@ -3,7 +3,12 @@ body {
     margin: 0;
     font-family: 'Montserrat';
     font-size: 16px;
+    background-image: url(./background-math.jpg);
 }
+html {
+    scroll-behavior: smooth;
+  }
+  
 h2 {
     font-size: 40px;
 }
@@ -16,6 +21,10 @@ a {
 p {
 
     margin-left: 10px;
+}
+
+th {
+    color: orange;
 }
 
 button {
@@ -31,9 +40,8 @@ button {
     cursor: pointer;
     border-radius: 5px;
  }
-
 .header {
-    height: 90px;
+    height: 70px;
     background: black;
     color: white;
     display: flex;
@@ -41,11 +49,14 @@ button {
     margin-bottom: 30px;
 }
 .header-item {
-    margin-top: 70px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     font-size: 18px;
     margin-left: 50px;
-    margin-right: 5px;
+    margin-right: 50px;
+    border-top: 1px solid white;
 }
+
 .container {
     background-color: #333333;
     color: white;
@@ -54,6 +65,7 @@ button {
     padding-bottom: 30px;
     margin-top: 30px;
     height: auto;
+    margin-top: 50px;
 }
 table {
     width: 550px;
@@ -67,6 +79,9 @@ table {
     padding: 10px;
 }
 
+.tableContent {
+    width: 100%;
+}
 
 .form-item {
     width: 150px;
@@ -84,3 +99,14 @@ table {
  .outputs h2 {
      padding-top: 150px
  }
+
+ #outputsTable {
+     width:100%
+ }
+
+.arrowUP {
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    color: white;
+}

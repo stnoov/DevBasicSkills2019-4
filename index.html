@@ -7,19 +7,21 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <script src="mathProject.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Math Project</title>
 </head>
 <body>
-    <div class="header">
-        <div class="header-item"><a href="#">Number system conversion</a></div>
-        <div class="header-item"><a href="#">Number system outputs</a></div>
-        <div class="header-item"><a href="#">Combinatorics</a></div>
-        <div class="header-item"><a href="#">Truth tables</a></div>
-        <div class="header-item"><a href="#">Random values</a></div>
+    <div class="header" id="header">
+        <h2 style="margin-top:5px; margin-right: 300px; font-size: 46px;">LOGO</h2>
+        <div class="header-item"><a href="#conversionSection">Number system conversion</a></div>
+        <div class="header-item"><a href="#NumberSystemOutputsSection">Number system outputs</a></div>
+        <div class="header-item"><a href="#combinatoricsSection">Combinatorics</a></div>
+        <div class="header-item"><a href="#truthTablesSection">Truth tables</a></div>
+        <div class="header-item"><a href="#randomValuesSection">Random values</a></div>
     </div>
-    <p><strong> — This website is designed to help people with such thigs as: converting numbers (ex. Binary, Octal, Hex), 
-        Generating truth tables, solve combinatorics issues and generate random values.</strong> </p>
-    <div class="container">
+    
+        <!--conversion-->
+    <div class="container" id="conversionSection">
         <table class="center">
             <tr>
                 <td colspan="2"><h2>Number system conversion</h2></td>
@@ -67,16 +69,19 @@
             </tr>
         </table>
     </div>
-    <div class="container">
-        <div class="outputs">
+
+<!--Number system outputs-->
+
+    <div class="container" id="NumberSystemOutputsSection">
+        <div class="outputs center"  >
         <h2>Number system outputs</h2>
         <p>This section prints the table showing decimals 0-50 in BIN, OCT and HEX systems</p>
-        <p><a href="numberOutputs.html"><button>PRINT THE TABLE</button></a></p>
-        
-        </table>
-    </div>
+        <p><a href="numberOutputs.html"><button>GO TO THE PAGE</button></a>
+        </div>      
 </div>
-<div class="container">
+<!--Combinatorics-->
+<div class="container" id="combinatoricsSection">
+    <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
     <table class="center">
         <tr>
             <td colspan="2"><h2>Combinatorics</h2></td>
@@ -108,7 +113,7 @@
                 </td>
                 <td>
                         <input class="form-item" id="numberFromUserR">
-                </td>
+                </td>        
         </tr>
         <tr>
             <td> 
@@ -122,20 +127,70 @@
                 The   result   is: 
             </td>
             <td>
-                    <p id="combinatoricsResult">0</p>
+                    <p id="combinatoricsResult"></p>
             </td>
         </tr>
     </table>
 </div>
-<div class="container">
+<!--Truth tables-->
+<div class="container" id="truthTablesSection">
+        <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
         <table class="center">
                 <tr>
                     <td colspan="2"><h2>Truth tables</h2></td>
+                    <tr>
+                        <td colspan="2">
+                        <table>
+                            <tr class="head center">
+                                <th>A</th>
+                                <th>B</th>
+                                <th>&#172;b</th>
+                                <th>a &#8743; b</th>
+                                <th>a &#8744; b</th>
+                                <th>a &#8594; b</th>
+                              </tr>
+                              <tr class="row">
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="row">
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr class="row">
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr class="row">
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                  </tr>
+                                  
+                        </table>
+                    </td>
+                    </tr>
                 </tr>
         </table>
 </div>
-
-<div class="container">
+<!--Random values-->
+<div class="container randomValuesSection">
+        <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
         <table class="center">
                 <tr>
                     <td colspan="2"><h2>Random values</h2></td>
