@@ -1,5 +1,3 @@
-
-
 function conversion() {
     var fromSystem = document.getElementById("systemFrom").value;
     var toSystem = document.getElementById("systemTo").value;
@@ -16,8 +14,6 @@ function conversion() {
         }
         return true;
     }
-
-
     if (fromSystem == toSystem) {
         alert("ERROR! Please, chose correct number system to convert")
     } if (fromSystem == "Binary" && isArrayBool(output) == false) {
@@ -73,6 +69,7 @@ function conversion() {
     }
 }
 
+
 function resetConversion() {
     var fromSystem = document.getElementById("systemFrom");
     fromSystem.value = fromSystem.defaultValue;
@@ -82,98 +79,3 @@ function resetConversion() {
     numberFromUser.value = numberFromUser.defaultValue;
     var resultField = document.getElementById("conversionResult");
 }
-
-function WithSampling() {
-    var divElement = document.getElementById('withSampling');
-    var x = document.createElement("INPUT");
-    var checkbox = document.createElement('input'); 
-    checkbox.type = "checkbox"; 
-    checkbox.name = "name"; 
-    checkbox.value = "value"; 
-    checkbox.id = "samplingCheckbox"; 
-    var label = document.getElementById('WithSamplingText');
-    label.innerHTML = "With Sampling";
-    divElement.appendChild(checkbox); 
-    }
-
-function chosenMethodCombinations() {
-    if (document.contains(document.getElementById("samplingCheckbox"))) {
-        var label = document.getElementById('WithSamplingText');
-        label.innerHTML = "";
-        document.getElementById('samplingCheckbox').remove();
-} 
-    var chosenValue = document.getElementById('chosenMethod');
-    var chosenFormula = document.getElementById('chosenMethodFormula')
-    chosenValue.innerHTML = "combinations";
-    chosenFormula.innerHTML = "P! / R! x (P-R)!"
-}
-
-function chosenMethodPermutations() {
-    var chosenValue = document.getElementById('chosenMethod');
-    var chosenFormula = document.getElementById('chosenMethodFormula')
-    chosenValue.innerHTML = "permutations";
-    chosenFormula.innerHTML = "!P / !(P - R) "
-}
-
-function fact(num) {
-    var rval = 1;
-    for (var i = 2; i <= num; i++)
-        rval = rval * i;
-    return rval;
-}
-
-function permutations(n, k) {
-    var p = fact(n);
-    var v = fact(n-k);
-    return p/v;
-}
-
-function combinations(n, k) 
-  {
-    var p = fact(n);
-    var v = fact(n-k);
-    return p/v/fact(k);
-  }
-
-function Combinatorics() {
-    
-    var valueP = document.getElementById('numberFromUserP').value;
-    var valueR = document.getElementById('numberFromUserR').value;
-    var combinatoricsResult = document.getElementById('combinatoricsResult');
-
-    if (document.getElementById('Combinations').checked) {
-        combinatoricsResult.innerHTML = combinations(valueP,valueR);
-      } else if (document.getElementById('Permutations').checked) {
-        combinatoricsResult.innerHTML = permutations(valueP,valueR);
-      }
-    }
-
-    function toStringToUpperCase(a, b) {
-        var c;
-        c = (a.toString(b));
-        c = c.toString().toUpperCase();
-        return (c);
-    }
-
-    function createTable() {
-    document.write("<table class='tableContent' border=1> <tr><th>Decimal</th><th>Binary</th><th>Octal</th><th>Hexidecimal</th></tr>")
-    for (i = 1; i < 51; i++) {
-      document.write("<tr><th>" + toStringToUpperCase(i, 10) + "</th><th>   " + toStringToUpperCase(i, 2) + "</th><th>    " + toStringToUpperCase(i, 8) + "</th><th>    " + toStringToUpperCase(i, 16) + "</th></tr> ");
-    }
-    document.write("</table>");
-    document.write("</div>");
-    }
-    
-    function fillTable() {
-        if (document.getElementById('checkButton').textContent == 'Display') {
-            document.getElementById('conversionTable').style.visibility = 'visible';
-            document.getElementById('checkButton').textContent = 'Hide';
-    
-        }
-        else {
-            document.getElementById('conversionTable').style.visibility = 'hidden';
-            document.getElementById('checkButton').textContent = 'Display';
-    
-        }
-    
-    }   

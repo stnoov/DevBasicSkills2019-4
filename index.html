@@ -6,22 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <script src="mathProject.js"></script>
+    <script src="randomnumbers.js"></script>
+    <script src="conversion.js"></script>
+    <script src="combinatorics.js"></script>
+    <script src="systemstable.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Math Project</title>
 </head>
 <body>
     <div class="header" id="header">
-        <h2 style="margin-top:5px; margin-right: 300px; font-size: 46px;">LOGO</h2>
+        <h2 style="margin-top: 10px; margin-right: 90px"><a href="#header">MathHelper</a></h2>
         <div class="header-item"><a href="#conversionSection">Number system conversion</a></div>
         <div class="header-item"><a href="#NumberSystemOutputsSection">Number system outputs</a></div>
         <div class="header-item"><a href="#combinatoricsSection">Combinatorics</a></div>
         <div class="header-item"><a href="#truthTablesSection">Truth tables</a></div>
         <div class="header-item"><a href="#randomValuesSection">Random values</a></div>
+        <div class="header-item"><a href="#EncoderDecoder">Decoder</a></div>
     </div>
-    
-        <!--conversion-->
-    <div class="container" id="conversionSection">
+     <!--CONVERSION STARTS HERE-->   
+     <div class="content">
+    <div class="container" id="conversionSection" style="margin-top: -25px">
         <table class="center">
             <tr>
                 <td colspan="2"><h2>Number system conversion</h2></td>
@@ -69,17 +73,20 @@
             </tr>
         </table>
     </div>
+     <!--CONVERSION ENDS HERE-->   
 
-<!--Number system outputs-->
+
+<!--NUMBER SYSTEM OUTPUTS STARTS HERE-->
 
     <div class="container" id="NumberSystemOutputsSection">
         <div class="outputs center"  >
         <h2>Number system outputs</h2>
         <p>This section prints the table showing decimals 0-50 in BIN, OCT and HEX systems</p>
-        <p><a href="numberOutputs.html"><button>GO TO THE PAGE</button></a>
+        <p><a href="numberOutputs.html"><button>Go to the page</button></a>
         </div>      
 </div>
-<!--Combinatorics-->
+
+<!--COMBINATORICS-->
 <div class="container" id="combinatoricsSection">
     <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
     <table class="center">
@@ -91,7 +98,7 @@
                 <td>
                     <input type="radio" name="combinatorics" onclick="chosenMethodCombinations()" id="Combinations">Combinations
                     <input type="radio" name="combinatorics" onclick="WithSampling() , chosenMethodPermutations()"  id="Permutations">Permutations
-                    <div id="withSampling"><span id="WithSamplingText"></span></div>                     
+                    <div style="visibility: hidden;" id="withSampling"><input type="checkbox" class="checkbox" onclick="checkBoxSet()">With Sampling</div>                     
             </td>
         </tr>
         <tr>
@@ -107,7 +114,7 @@
                     <input class="form-item" id="numberFromUserP">
             </td>
         </tr>
-        <tr>
+        <tr id="RValue">
             <td >
                 Enter "R" value here: 
                 </td>
@@ -117,7 +124,7 @@
         </tr>
         <tr>
             <td> 
-                <button onclick="resetConversion()" >RESET</button>
+                
             </td>
             <td>
             <button onclick="Combinatorics()" >SUBMIT</button></td>
@@ -192,10 +199,58 @@
 <div class="container randomValuesSection">
         <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
         <table class="center">
-                <tr>
-                    <td colspan="2"><h2>Random values</h2></td>
-                </tr>
+            <tr>
+                <td colspan="4"><h2>Random Values</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                    Enter the range:
+                </td>
+                <td>
+                    <input class="form-item" id="minRangeValue">                   
+                </td>
+                <td>
+                    <input class="form-item" id="maxRangeValue">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                   How many numbers do you want? 
+                </td>
+                <td>
+                        <input class="form-item" id="amountOfNumbers">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                </td>
+                <td colspan="2"> 
+                <button  onclick="createArrayOfRandomNumbers()">SUBMIT</button></td>
+            </tr>
+            <tr>
+                <td colspan="3" >
+                    The   result   is: 
+                </td>
+                <td colspan="2">
+                        <p id="RandomNumbersResult"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" >
+                    <div id="numDesc" style="visibility: hidden;">There are <span id="negativeNumbers"></span> negative,&nbsp <span id="positiveNumbers"></span> positive,&nbsp<span id="oddNumbers"></span> odd and <span id="evenNumbers"></span> even numbers</div>
+                </td>
+            </tr>
         </table>
+</div>
+
+<div class="container" id="EncoderDecoder">
+    <div class="outputs center"  >
+            <a href="#header"><div class="arrowUP"><i class="fa fa-angle-double-up" style="font-size:36px"></i></div></a>
+    <h2>Encoder and Decoder</h2>
+    <p>This section will help you to encode and decode your messages</p>
+    <p><a href="Decoder.html"><button>Go to the page</button></a>
+    </div>      
+</div>
 </div>
 </body>
 </html>
