@@ -12,7 +12,7 @@ function chosenMethodCombinations() {
     var chosenValue = document.getElementById('chosenMethod');
     var chosenFormula = document.getElementById('chosenMethodFormula')
     chosenValue.innerHTML = "combinations";
-    chosenFormula.innerHTML = "P! / R! x (P-R)!"
+    chosenFormula.innerHTML = "!P / !R x !(P-R)"
 }
 
 function chosenMethodPermutations() {
@@ -47,7 +47,7 @@ function combinations(n, k)
   }
 
 function permutationsWithSampling(n,k) {
-    return fact(n);
+    return Math.pow(n, k);
 }
 
 function checkBoxSet() {
@@ -56,11 +56,9 @@ function checkBoxSet() {
   if ( ! (document.querySelector('.checkbox').checked)) {
     chosenValue.innerHTML = "permutations";
     chosenFormula.innerHTML = "!P / !(P - R) ";
-    document.getElementById("RValue").style.visibility = "visible"
   } else if (document.querySelector('.checkbox').checked) {
-    document.getElementById("RValue").style.visibility = "hidden"
-    chosenValue.innerHTML = "permutations without repetitions";
-    chosenFormula.innerHTML = "!P";
+    chosenValue.innerHTML = "permutations with repetitions";
+    chosenFormula.innerHTML = "P<sup>R</sup>";
     
   }
 
